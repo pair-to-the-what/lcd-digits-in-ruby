@@ -32,6 +32,7 @@ end
 class Fixnum
   def to_lcd
     return "._.\n..|\n..|" if self == 7
+    return "._.\n|.|\n|_|" if self == 0
 
     "...\n..|\n..|"
   end
