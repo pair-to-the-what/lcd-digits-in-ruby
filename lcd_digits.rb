@@ -34,4 +34,7 @@ class Fixnum
       5 => "._.\n|_.\n._|"
     }[self]
   end
+  def break_into_digits
+    return [1]
+  end
 end
