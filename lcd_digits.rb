@@ -19,6 +19,14 @@ class TestLcdDigits < Test::Unit::TestCase
 
     assert_equal(expected, result)
   end
+
+  def test_given_zero_it_works
+    result = 0.to_lcd
+
+    expected = "._.\n|.|\n|_|"
+
+    assert_equal(expected, result)
+  end
 end
 
 class Fixnum
