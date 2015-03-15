@@ -53,6 +53,9 @@ class Fixnum
   end
 
   def break_into_digits
-    [self]
+    self.
+      to_s.
+      split('').
+      map { |v| v.to_i }
   end
 end
