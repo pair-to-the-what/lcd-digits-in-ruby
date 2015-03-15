@@ -31,6 +31,15 @@ class TestBreakUpDigits < Test::Unit::TestCase
 
     assert_equal(expected, answer)
   end
+
+  def test_breaking_up_35_is_just_an_array_of_35
+    answer = 35.break_into_digits
+
+    expected = [3, 5]
+
+    assert_equal(expected, answer)
+  end
+
 end
 
 class Fixnum
