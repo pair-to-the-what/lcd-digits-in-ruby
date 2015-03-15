@@ -4,7 +4,7 @@ require 'test/unit'
 
 class TestLcdDigits < Test::Unit::TestCase
   def test_given_one_it_works
-    result = lcd_digits(1)
+    result = 1.to_lcd
 
     expected = "...\n..|\n..|"
 
@@ -12,6 +12,8 @@ class TestLcdDigits < Test::Unit::TestCase
   end
 end
 
-def lcd_digits(_)
-  "...\n..|\n..|"
+class Fixnum
+  def to_lcd
+    "...\n..|\n..|"
+  end
 end
