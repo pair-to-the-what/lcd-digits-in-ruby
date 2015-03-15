@@ -36,6 +36,6 @@ class Fixnum
   end
 
   def break_into_digits
-    [1]
+    [self]
   end
 end
