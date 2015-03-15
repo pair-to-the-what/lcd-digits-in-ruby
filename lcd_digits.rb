@@ -15,6 +15,16 @@ class TestLcdDigits < Test::Unit::TestCase
   end
 end
 
+class TestBreakUpDigits < Test::Unit::TestCase
+  def test_breaking_up_1_is_just_an_array_of_1
+    answer = 1.break_into_digits
+
+    expected = [1]
+
+    assert_equal(expected, answer)
+  end
+end
+
 class Fixnum
   def to_lcd
     {
