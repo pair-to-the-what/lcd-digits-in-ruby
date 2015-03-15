@@ -16,10 +16,10 @@ class TestLcdDigits < Test::Unit::TestCase
 end
 
 class TestBreakUpDigits < Test::Unit::TestCase
-  def test_breaking_up_1_is_just_an_array_of_1
-    answer = 1.break_into_digits
+  def test_breaking_up_3_is_just_an_array_of_3
+    answer = 3.break_into_digits
 
-    expected = [1]
+    expected = [3]
 
     assert_equal(expected, answer)
   end
