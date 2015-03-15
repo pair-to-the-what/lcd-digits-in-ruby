@@ -17,10 +17,11 @@ end
 
 class Fixnum
   def to_lcd
-    return "._.\n..|\n..|" if self == 7
-    return "._.\n|.|\n|_|" if self == 0
-    return "._.\n|_.\n._|" if self == 5
-
-    "...\n..|\n..|"
+    {
+      1 => "...\n..|\n..|",
+      7 => "._.\n..|\n..|",
+      0 => "._.\n|.|\n|_|",
+      5 => "._.\n|_.\n._|"
+    }[self]
   end
 end
