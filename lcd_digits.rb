@@ -3,29 +3,14 @@
 require 'test/unit'
 
 class TestLcdDigits < Test::Unit::TestCase
-  def test_given_one_it_works
-    result = 1.to_lcd
-
-    expected = "...\n..|\n..|"
-
-    assert_equal(expected, result)
-
-  end
-
-  def test_given_seven_it_works
-    result = 7.to_lcd
-
-    expected = "._.\n..|\n..|"
-
-    assert_equal(expected, result)
-  end
-
-  def test_given_zero_it_works
-    result = 0.to_lcd
-
-    expected = "._.\n|.|\n|_|"
-
-    assert_equal(expected, result)
+  {
+    1 => "...\n..|\n..|",
+    7 => "._.\n..|\n..|",
+    0 => "._.\n|.|\n|_|"
+  }.each do |given_number, expected_digits|
+    define_method("test_given_#{given_number}_it_works") do
+      assert_equal(expected_digits, given_number.to_lcd)
+    end
   end
 end
 
