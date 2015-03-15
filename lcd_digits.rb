@@ -23,6 +23,14 @@ class TestBreakUpDigits < Test::Unit::TestCase
 
     assert_equal(expected, answer)
   end
+
+  def test_breaking_up_1_is_just_an_array_of_1
+    answer = 1.break_into_digits
+
+    expected = [1]
+
+    assert_equal(expected, answer)
+  end
 end
 
 class Fixnum
@@ -36,6 +44,6 @@ class Fixnum
   end
 
   def break_into_digits
-    [self]
+    [3]
   end
 end
