@@ -56,6 +56,6 @@ class Fixnum
     self.
       to_s.
       split('').
-      map { |v| v.to_i }
+      map(&:to_i)
   end
 end
